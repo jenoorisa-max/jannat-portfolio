@@ -1,3 +1,4 @@
+
 import { Section } from "../ui/Section";
 
 const contactLinks = [
@@ -41,11 +42,13 @@ export function Contact() {
           </p>
 
           <div className="mt-7">
-            {contactLinks.map((link, index) => (
+            {contactLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                target={link.href.startsWith("mailto:") ? undefined : "_blank"}
+                target={
+                  link.href.startsWith("mailto:") ? undefined : "_blank"
+                }
                 rel={
                   link.href.startsWith("mailto:")
                     ? undefined
